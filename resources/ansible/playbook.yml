@@ -1,0 +1,8 @@
+# Average completion of 4 mintues
+- hosts: all
+  become: true
+  roles:
+    - install-aspera
+    - configure-aspera
+  vars:
+    runAsperaSync: true

@@ -1,0 +1,13 @@
+- name: Append Aspera license to hosts
+  block:
+    - name: Configure Aspera license for primary host
+      ansible.builtin.copy:
+        src: ./files/AsperaEnterprise-license-primary
+        dest: /opt/aspera/etc/aspera-license
+      when: inventory_hostname in groups['primary']
+
+    - name: Configure Aspera license for secondary host
+      ansible.builtin.copy:
+        src: ./files/AsperaEnterprise-license-secondary
+        dest: /opt/aspera/etc/aspera-license
+      when: inventory_hostname in groups['secondary']

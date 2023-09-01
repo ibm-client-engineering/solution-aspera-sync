@@ -1,0 +1,21 @@
+---
+# tasks file for install-aspera
+- name: Check if Aspera is installed
+  block:
+    - name: Check if Aspera ascp cli is present
+      ansible.builtin.command: "which ascp"
+      register: ascp_check
+      ignore_errors: true
+
+    - name: Aspera is not installed, starting install
+      block:
+        - name: Copy Aspera Binary to hosts
+          ansible.builtin.copy:
+            src: ./files/ibm-aspera-hsts-4.4.2.550-linux-64-release.deb 
+            dest: /tmp
+        
+        - name: Install Aspera HSTS
+          ansible.builtin.apt:
+            deb: /tmp/ibm-aspera-hsts-4.4.2.550-linux-64-release.deb
+            state: present
+      when: ascp_check.rc != 0
