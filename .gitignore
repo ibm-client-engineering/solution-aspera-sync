@@ -21,15 +21,3 @@ package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# vagrant
-.vagrant
-
-# ansible
-.ansible.log
-
-# files
-AsperaEnterprise-license-primary
-AsperaEnterprise-license-secondary
-ibm-aspera-hsts-4.4.2.550-linux-64-release.deb
-id_rsa.pub
