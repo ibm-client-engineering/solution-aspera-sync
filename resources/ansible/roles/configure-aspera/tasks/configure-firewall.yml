@@ -1,0 +1,19 @@
+- name: Enable ufw
+  community.general.ufw: 
+    state: enabled
+    policy: allow
+  
+- name: Open required ports for Aspera
+  community.general.ufw:
+    rule: allow
+    port: "{{ item.port }}"
+    proto: "{{ item.proto }}"
+  loop:
+    - { port: '33001', proto: 'udp'} 
+    - { port: '33001', proto: 'tcp'} 
+    - { port: '40001', proto: 'tcp'} 
+    - { port: '8443', proto: 'tcp'} 
+    - { port: '8080', proto: 'tcp'} 
+    - { port: '22', proto: 'tcp'} 
+
+  

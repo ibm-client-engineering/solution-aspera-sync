@@ -1,0 +1,18 @@
+- name: Configure ssh server
+  ansible.builtin.lineinfile: 
+    path: /etc/ssh/sshd_config
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    state: present
+  loop:
+    - { regexp: '^#?PasswordAuthentication', line: 'PasswordAuthentication yes'}
+    - { regexp: '^#?PubkeyAuthentication', line: 'PubkeyAuthentication yes'}
+    - { regexp: '^#?AllowAgentForwarding', line: 'AllowAgentForwarding no'} 
+    - { regexp: '^#?AllowTcpForwarding', line: 'AllowTcpForwarding no'} 
+    - { regexp: '^#?Port 33001', line: 'Port 33001'}
+    - { regexp: '^#?Port 22', line: 'Port 22'}
+
+- name: Restart SSH service
+  ansible.builtin.service:
+    name: ssh
+    state: restarted

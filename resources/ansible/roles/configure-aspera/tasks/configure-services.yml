@@ -1,0 +1,8 @@
+- name: Enable system-networkd and system-networkd-wait-online.service
+  ansible.builtin.systemd:
+    name: "{{ item }}" 
+    enabled: true
+    state: started
+  loop:
+    - systemd-networkd
+    - systemd-networkd-wait-online.service

@@ -1,0 +1,20 @@
+- name: Create Aspera User 
+  ansible.builtin.user:
+    name: "asperauser"
+    comment: Aspera User  
+    shell: /bin/aspshell
+    state: present
+    generate_ssh_key: true
+    password: "{{ 'asperaPassword123' | password_hash('sha512', 'mysecretsalt') }}"
+
+- name: Create required folders for Aspera and Aspera sync
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+    owner: asperauser
+    group: asperauser
+  loop:
+    - /home/asperauser/asperaContent
+    - /home/asperauser/asperaSyncLogs
+    - /home/asperauser/asperaSyncDbdir
