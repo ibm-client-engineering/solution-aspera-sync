@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[164],{5573:s=>{s.exports=JSON.parse('{"label":"sprint","permalink":"/solution-aspera-sync/blog/tags/sprint","allTagsPath":"/solution-aspera-sync/blog/tags","count":2}')}}]);

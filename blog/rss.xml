@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>IBM Client Engineering Blog</title>
         <link>https://ibm-client-engineering.github.io/solution-aspera-sync/blog</link>
         <description>IBM Client Engineering Blog</description>
-        <lastBuildDate>Thu, 01 Jun 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 06 Sep 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[Log - Sprint 1 🛫]]></title>
-            <link>https://ibm-client-engineering.github.io/solution-aspera-sync/blog/flight-log-4</link>
-            <guid>https://ibm-client-engineering.github.io/solution-aspera-sync/blog/flight-log-4</guid>
-            <pubDate>Thu, 01 Jun 2023 00:00:00 GMT</pubDate>
+            <title><![CDATA[Log - Sprint 2 🛫]]></title>
+            <link>https://ibm-client-engineering.github.io/solution-aspera-sync/blog/flight-log-2</link>
+            <guid>https://ibm-client-engineering.github.io/solution-aspera-sync/blog/flight-log-2</guid>
+            <pubDate>Wed, 06 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Flight Log of Co-Creation Activities]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="work-in-progress">Work in Progress<a href="#work-in-progress" class="hash-link" aria-label="Direct link to Work in Progress" title="Direct link to Work in Progress">​</a></h2><ul><li>In today's working session, team just answered customer's inquiry on Sync such as scalability and permissions between the Aspera servers</li><li>We went through logging</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="issuesquestions-faced">Issues/questions faced<a href="#issuesquestions-faced" class="hash-link" aria-label="Direct link to Issues/questions faced" title="Direct link to Issues/questions faced">​</a></h2><ul><li>Customer would like to disable <code>Sync Session Stats</code> from logs and only show errors</li><li>Customer wants Aspera to run like a batch job instead of syncing 24/7</li><li>Customer wants to know more about Aspera console and adding new aspera server to managed nodes</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="currently-tracking">Currently Tracking<a href="#currently-tracking" class="hash-link" aria-label="Direct link to Currently Tracking" title="Direct link to Currently Tracking">​</a></h2><ul><li>Customer will continue to play around with Aspera Sync</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2><ul><li>Will answer current and future question of the customer till next followup meeting</li></ul>]]></content:encoded>
+            <category>log</category>
+            <category>sprint</category>
+        </item>
+        <item>
+            <title><![CDATA[Log - Sprint 1 🛫]]></title>
+            <link>https://ibm-client-engineering.github.io/solution-aspera-sync/blog/flight-log-1</link>
+            <guid>https://ibm-client-engineering.github.io/solution-aspera-sync/blog/flight-log-1</guid>
+            <pubDate>Tue, 05 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Flight Log of Co-Creation Activities]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="work-in-progress">Work in Progress<a href="#work-in-progress" class="hash-link" aria-label="Direct link to Work in Progress" title="Direct link to Work in Progress">​</a></h2><ul><li>Today the team guided the customer on configuring their Aspera to work with Sync. The client has already installed and applied the licenses beforehand.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="issuesquestions-faced">Issues/questions faced<a href="#issuesquestions-faced" class="hash-link" aria-label="Direct link to Issues/questions faced" title="Direct link to Issues/questions faced">​</a></h2><ul><li>Desired customer transfer user was not made properly and had issues such as not being in <code>/etc/passwd</code>.</li><li>Client had two servers, A and B. A was unable to initiate sync to B while B was able to do it to A. It was later confirm that there was conflicting policies on A only.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="currently-tracking">Currently Tracking<a href="#currently-tracking" class="hash-link" aria-label="Direct link to Currently Tracking" title="Direct link to Currently Tracking">​</a></h2><ul><li>Customer will play around with Aspera Sync</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2><ul><li>Client wishes to redo the configuration from scratch in the next working session to understand and learn more about Aspera Sync</li></ul>]]></content:encoded>
             <category>log</category>
             <category>sprint</category>
         </item>
